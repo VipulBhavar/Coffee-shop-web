@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <style>
+        /* CSS reset */
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+/* CSS variables */
+
+:root{
+    --navbar-height:40px;
+}
+/* Navigation bar */
+
+#navbar{
+    display:flex;
+    align-items:center;
+    position:relative;
+    top:0px;
+    width:100%;
+    background-color: black;
+    opacity:0.8;
+}
+
+/* Navigation bar logo and images */
+
+#logo{
+    display:inline-block;
+    margin:10px 25px;
+    top:0px;
+}
+#logo img{
+    height:50px;
+    width:50px;
+    margin:3px 6px;
+}
+/* shop name */
+
+#navbar .shopname h3{
+    color:brown;
+    font-style: italic;
+    font-weight: 700;
+}
+.right{
+    display:block;
+    position:relative;
+    left:1150px;
+    font-size:30px; 
+    cursor:pointer; 
+    color:white;
+}
+
+/* Menu button */
+
+.overlay
+{
+height:0%;
+width:100%;
+position:fixed;
+z-index:1;
+top:0;
+left:0px;
+background-color:rgb(0,0,0);
+background-color:rgba(0,0,0,0.9);
+overflow-y:hidden;
+transition:0.5s;
+}
+.overlay-content
+{
+position:relative;
+top:25%;
+width:100%;
+text-align:center;
+margin-top:30px;
+}
+.overlay a
+{
+padding:8px;
+text-decoration:none;
+font-size:36px;
+color:#818181;
+display:block;
+/* position:relative;
+left:200px; */
+transition:0.3s;
+}
+.overlay a:hover,.overlay a:focus
+{
+color:#f1f1f1;
+}
+.overlay .closebtn
+{
+position:absolute;
+top:20px;
+right:45px;
+font-size:60px;
+}
+@media screen and (max-height:450px)
+{
+.overlay{overflow-y:auto;}
+.overlay a{font-size:20px}
+.overlay .closebtn
+{
+font-size:40px;
+top:15px;
+right:35px;
+}
+}
+#navbar .active{
+    color:white;
+}
+
+/* Home section */
+
+#home{
+    display:flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height:400px;
+    justify-content:center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background:url('bg6.jpg') no-repeat center center/cover;
+    position:absolute;
+    height:100%;
+    width:100%;
+    z-index:-1;
+    /* opacity:0.5; */
+}
+#home h1{
+    display:block;
+    position:relative;
+    top:100px;
+    right:370px;
+    font-size: 80px;
+    color:white;
+    font-weight:700;
+}
+#home span{
+    display: inline-block;
+    position:relative;
+    top:110px;
+    right:380px;
+}
+#home .text{
+    color:white;
+}
+#home .checked {
+  color: orange;
+}
+
+/* Review container */
+
+#reviewcontainer{
+    display:block;
+    position:relative;
+    background-color: #f2f2f2;
+    top:210px;
+    height:1500px;
+}
+#reviewcontainer .row{
+    display:flex;
+    margin: 5px 10px;   
+}
+#reviewcontainer .reviewbox{
+    display:inline-block;
+    position:relative;
+    background-color:white;
+    top:100px;
+    height:400px;
+    width:330px;
+    padding:0px 30px;
+    margin:10px 23px; 
+    left:100px;
+} 
+#reviewcontainer .reviewbox img{
+    display:block;
+    position:relative;
+    height:80px;
+    width:80px;
+    top:20px;
+    left:140px;
+}
+#reviewcontainer .reviewbox h3{
+    display:block;
+    position:relative;
+    left:150px;
+    top:40px;
+}
+#reviewcontainer .reviewbox p{
+    display:block;
+    position:relative;
+    top:30px;
+    width:70%;
+    left:30px;
+    text-align: center;
+}
+#reviewcontainer span{
+    display:inline-block;
+    position:relative;
+    top:20px;
+    left:40px;
+}
+#reviewcontainer .checked {
+  color: orange;
+}
+#reviewcontainer span a .fa{
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+#reviewcontainer a{
+    display:block;
+    position:relative;
+    top:50px;
+    left:150px;
+    float:left;
+    padding:0px 5px;
+}
+#reviewcontainer span a .fa:hover{
+    opacity:0.7;
+}
+#reviewcontainer span a .fa-facebook {
+    background:#3B5998;
+    color: white;
+}
+#reviewcontainer span a .fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+#reviewcontainer span a .fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+/* footer section */
+
+footer{
+    background-color: black;
+    color:grey;
+    height:465px; 
+    display:block;
+    position:relative;
+    top:200px;
+}
+#foot{
+    display:flex;
+    padding:12px 20px;
+}
+#foot .box4{
+    display:block;
+    position:reative;
+    width:30%;
+}
+#foot .box4 ul li{
+    list-style: none;
+    text-decoration:none;
+}
+#foot .box5 h1{
+    display:inline-block;
+    position:relative;
+    left:210px;
+}
+#foot .box5 p{
+    display:inline-block;
+    position:relative;
+    left:210px;
+    color:grey;
+    width:36%;
+}
+#foot .box6 div a{
+    display:inline-block;
+    position:relative;
+    left:-5px;
+    padding:12px 20px;
+}
+div.copyright{
+    display:inline-block;
+    position:relative;
+    top:270px;
+    left:500px;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="left">
+            <div id="logo">
+                <img src="img/logo2.webp" alt="Coffee nation">
+            </div>
+        </div>
+            <div class="shopname">
+                <h3>Coffee nation</h3>
+            </div>
+        <div id="mynav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn"onclick="closenav()">&times;</a>
+        <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="store.html">Store</a>
+        <a href="services.html">Services</a>
+        <a href="about us.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+        </div>
+        </div>
+        <span class ="right" onclick="opennav()">&#9776;Menu</span>
+        <script>
+        function opennav()
+        {
+         document.getElementById("mynav")
+         .style.height="100%";
+        }
+        function closenav()
+        {
+         document.getElementById("mynav")
+         .style.height="0%";
+        }
+        </script>
+    </nav>
+    <section id="home">
+        <h1>Testimonials</h1>
+        <div>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="text">5 Stars Average Ratings</span>
+        </div>
+    </section>
+    <section id="reviewcontainer">
+        <div class="row">
+            <div class="reviewbox">
+                <img src="img/img9.jpg" alt="">
+                <h3>Julia Parker</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>"I love the coffee and atmosphere at your coffee shop. I attend a meeting there on most Monday mornings. When I arrive, 
+                    I’m greeted with a smile and the Barista always takes the time to fix my coffee just as I want it. My favorite drink is the Carmel Mocha."</p>
+                <!-- <br><br> -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+            <div class="reviewbox">
+                <img src="img/img 10.jpg" alt="">
+                <h3>John Miller</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>"I tried coffee here for the first time just the other day. The location may seem hidden but it is actually very easy to find Coffee Shop on the map. I ordered just a medium regular
+                    coffee and it was very good. The lady who poured the coffee was very friendly. I will definitely be back!"
+                    </p>
+                <!-- <br><br> -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+            <div class="reviewbox">
+                <img src="img/img 11.jpg" alt="">
+                <h3>Katherine Smith</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>I visited Coffee Shop last week during the day with my laptop so that I could get some work of my own done and enjoy some coffee shop atmosphere. 
+                    This place was perfect! The coffee was great, and the truffles were ridiculously good. I recommend 
+                    this place to everybody."</p>
+                <!-- <br><br> -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="reviewbox">
+                <img src="img/img 35.png" alt="">
+                <h3>Jonathon Trot</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>I tried coffee here for the first time just the other day. The location may seem hidden but it is actually very easy to find Coffee Shop on the map. I ordered just a medium regular coffee and it was very good. The lady who poured the coffee was very friendly. I will definitely be back!</p>
+                <!-- <br><br> -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+            <div class="reviewbox">
+                <img src="img/img 34.png" alt="">
+                <h3>Miranda Perkins</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>"I visited Coffee Shop last week during the day with my laptop so that I could get some work of my own done and enjoy some coffee shop atmosphere. This place was perfect! The coffee was great, and the truffles were ridiculously good. I recommend this place to everybody."</p>
+                <!-- <br><br> -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+            <div class="reviewbox">
+                <img src="img/img 36.jpg" alt="">
+                <h3>Jim McMillan</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>"Great atmosphere, excellent drinks (I tried two of them and plan to work through the menu) and friendly staff - a combination for success! Add the commitment to serve and this is a venture I can endorse without reservation. I will definitely recommend you to my friends."</p>
+                <!-- <br><br> -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="reviewbox">
+                <img src="img/img 37.png" alt="">
+                <h3>David Flores</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>"Great espresso drinks pulled manually by their well trained baristas. The atmosphere is calm, relaxing, with a nice rustic theme. Quirky and local, the way top coffee shops should be."</p>
+                <!-- <br><br> -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+            <div class="reviewbox">
+                <img src="img/img 38.png" alt="">
+                <h3>Patrick Perez</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>"Prices are comparable to what I'd expect in a Starbucks, but the quality is much better. All that I tasted from your menu was absolutely amazing, full of flavor and captivating aroma."</p>
+                <!-- <br><br> -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+            <div class="reviewbox">
+                <img src="img/img 35.png" alt="">
+                <h3>Jade Anderson</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>"I ordered just a medium regular coffee and it was very good.I will definitely be back!"</p>
+                <!-- <br><br> -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+    </section>
+    <br>
+    <footer>
+        <div id="foot">
+            <div class="box4">
+               <h1>Pages</h1>
+               <hr>
+               <div class="list">
+                   <ul>
+                       <li>HOME</li>
+                       <li>STORE</li>
+                       <li>SERVICES</li>
+                   </ul>
+               </div>
+               <div class="list">
+                   <ul>
+                       <li>ABOUT US</li>
+                       <li>CONTACT US</li>
+                   </ul>
+               </div> 
+            </div>
+            <div class="box5">
+                <h1>Description</h1>
+                <hr>
+                <p>Coffee Nation is a cosy place where friends meet to share coffee, cakes and light meals.
+                     At night, it is transformed into a vibey eatery.</p>
+            </div>
+            <div class="box6">
+                <h1 class="cen">Follow Us</h1>
+                <hr>
+                <div>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; www.onlinecoffeecart.com All rights reserved!
+        </div>
+    </footer>
+</body>
+</html>

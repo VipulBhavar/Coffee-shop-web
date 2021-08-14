@@ -1,0 +1,480 @@
+/* CSS reset */
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+/* CSS variables */
+
+:root{
+    --navbar-height:40px;
+}
+/* Navigation bar */
+
+#navbar{
+    display:flex;
+    align-items:center;
+}
+
+/* Navigation bar logo and images */
+
+#logo{
+    display:inline-block;
+    margin:10px 25px;
+    top:0px;
+}
+#logo img{
+    height:50px;
+    width:50px;
+    margin:3px 6px;
+}
+/* shop name */
+
+#shopname h3{
+    color:brown;
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Navigation bar: list stylings */
+
+#navbar{
+    position: fixed;
+    top:0px;
+    width:100%;
+    background-color: black;
+    background-blend-mode: darken;
+    opacity:0.6;
+}
+#navbar ul{
+    display:flex;
+}
+#navbar:before{
+    content: "";
+    position:absolute;
+    top:0px;
+    left:70px;
+    height:132px;
+    width:100%;
+}
+#navbar ul li{
+    list-style: none;
+    font-size:1.3rem;
+}
+#navbar ul li a{
+    display:block;
+    padding:14px 20px;
+    color:white;
+    font-weight: 600;
+    text-decoration:none;
+    cursor: pointer;
+    z-index:-1;
+    opacity:0.9;
+    border-radius: 20px;
+}
+#navbar ul li a:hover{
+    color:rgb(155, 155, 41);
+    cursor:pointer;
+}
+.center{
+    display:block;
+    position: relative;
+    left:250px;
+    width:68%;
+    margin:7px auto;
+}
+.right{
+    display:block;
+    position:relative;
+    left:590px;
+}
+.right1{
+    display:block;
+    position:relative;
+    left:610px;
+}
+#navbar ul li a.active{
+    color:rgb(155, 155, 41);
+}
+
+/* Home section */
+
+#home{
+    display:flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height:720px;
+    justify-content:center;
+    align-items: center;
+}
+#home:before{
+    content: "";
+    background:url('../bg6.jpg') no-repeat center center/cover;
+    background-blend-mode: darken;
+    position:absolute;
+    height:100%;
+    width:100%;
+    z-index:-1;
+    opacity:0.9;
+}
+
+#home h1{
+    display:inline-block;
+    position:relative;
+    color:rgb(155, 155, 41);
+    right:400px;
+    /* text-align: center; */
+    font-size:1.5rem;
+}
+#home p{
+    display:inline-block;
+    position:relative;
+    right:330px;
+    width:36%;
+    color:white;
+}
+#home button{
+    display:inline-block;
+    position:relative;
+    top:40px;
+    right:470px;
+}
+
+/* container */
+
+#services{
+    display:flex;
+    background-color:rgb(194, 140, 70);
+    height:468px;
+}
+#services .box{
+    padding:10px 20px;
+    display:block;
+    position: relative;
+    top:50px;
+}
+#services .box img{
+    height:340px;
+    width:280px;
+    z-index:-1;
+    opacity:0.8;
+}
+#services .box h1,p{
+    color:white;
+}
+
+/* service container */
+
+#service-container{
+    display:flex;
+    background-color:rgb(194, 140, 70);
+    height:697px;
+    width:100%;
+}
+#service-container .box1{
+    padding:10px 20px;
+    margin:20px auto;
+    width:50%;
+}
+#service-container .box1 h1{
+    display:block;
+    position:relative;
+    top:140px;
+    left:100px;
+    color:white;
+    font-weight: 700;
+}
+#service-container .box1 p{
+    display:block;
+    position:relative;
+    width:50%;
+    top:160px;
+    left:100px;
+    color:white;
+    font-weight: 600;
+}
+#service-container .box1 button{
+    display:block;
+    position:relative;
+    top:140px;
+    left:90px;
+}
+
+/* products-container */
+
+#product-container{
+    display:block;
+    position:relative;
+    top:20px;
+    height:1200px;
+    opacity:0.8;
+}
+#product-container::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.7;
+    background: url('../bg7.jpg') no-repeat center center/cover;
+}
+#product-container h1{
+    display:inline-block;
+    position:relative;
+    left:620px;
+    top:60px;
+     color:white; 
+    font-weight: 700;
+}
+#product-container p{
+    display:inline-block;
+    position: relative;
+    top:140px;
+    width:30%;
+    left:300px;
+    color:white;
+    font-weight: 700;
+}
+#product-container .products{
+    display:flex;
+    margin:6px 10px;
+}
+#product-container .box3{
+    display:inline-block;
+    position:relative;
+    top:250px;
+    margin:25px 30px;
+    height:605px;
+    width:440px;
+    background-color: white;
+}
+#product-container .box3 img{
+    height:420px;
+    width:440px;
+    padding:0px;
+    margin:0px;
+}
+#product-container .box3 h2{
+    display:inline-block;
+    position:relative;
+    left:50px;
+    top:20px;
+}
+#product-container .box3 p{
+    display:block;
+    position:relative;
+    left:50px;
+    width:55%;
+    color:black;
+    top:30px;
+}
+#product-container .box3 div a{
+    display:block;
+    position:relative;
+    float:left;
+    left:150px;
+    padding:5px 9px;
+    top:10px;
+}
+#product-container div .bn{
+    display:block;
+    position:relative;
+    right:900px;
+    top:1000px;
+}
+#product-container button a{
+    text-decoration: none;
+    list-style: none;
+    color:black;
+}
+#product-container button a:hover{
+    color:black;
+}
+
+/* Testimonials */
+
+#testimonials{
+    background-color:#f2f2f2;
+    height:700px;
+}
+#testimonials h2{
+    display:inline-block;
+    position:relative;
+    left:620px;
+    top:70px;
+}
+#testimonials p{
+    display:inline-block;
+    position: relative;
+    width:30%;
+    left:300px;
+    top:140px;
+    color:grey;
+}
+#testimonials .box{
+    display:block;
+    position:relative; 
+    width:50%;
+    margin:30px auto;
+    top:50px;
+    left:50px;
+    height:800px;
+   
+}
+#testimonials .box img{
+    display:block;
+    position: relative;
+    left:230px;
+    top:80px;
+}
+#testimonials .box h3{
+    display:block;
+    position: relative;
+    left:220px;
+    top:100px;
+}
+#testimonials .box p{
+    display:block;
+    position:relative;
+    left:70px;
+    width:70%;
+    color:black;
+}
+#testimonials a{
+    display:inline-block;
+    position:relative;
+    top:180px;
+    left:240px;
+    padding:5px 10px;
+}
+#testimonials span a .fa:hover{
+    opacity:0.7;
+}
+#testimonials span a .fa-facebook {
+    background:#3B5998;
+    color: white;
+}
+#testimonials span a .fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+#testimonials span a .fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+#testimonials span{
+    display:inline-block;
+    position:relative;
+    left:240px;
+    top:300px;
+}
+
+/* Location */
+
+#location{
+    height:500px;
+}
+#location .box img{
+    height:100%;
+    width:100%;
+}
+
+/* footer section */
+
+footer{
+    background-color: black;
+    color:grey;
+    height:465px; 
+    display:block;
+    position:relative;
+    top:200px;
+}
+#foot{
+    display:flex;
+    padding:12px 20px;
+}
+#foot .box4{
+    display:block;
+    position:reative;
+    width:30%;
+}
+#foot .box4 ul li{
+    list-style: none;
+    text-decoration:none;
+}
+#foot .box5 h1{
+    display:inline-block;
+    position:relative;
+    left:210px;
+}
+#foot .box5 p{
+    display:inline-block;
+    position:relative;
+    left:210px;
+    color:grey;
+    width:36%;
+}
+#foot .box6 div a{
+    display:inline-block;
+    position:relative;
+    left:-5px;
+    padding:12px 20px;
+}
+div.copyright{
+    display:inline-block;
+    position:relative;
+    top:270px;
+    left:500px;
+}
+
+/* Utillity classes */
+.h-primary{
+    font-size:3.8rem;
+    padding:12px;
+}
+.h-secondary{
+    font-size:2.3rem;
+    padding:12px;
+}
+.btn{
+    padding:14px 28px;
+    border:2px solid white;
+    background-color: #56ccf2;
+    color:white;
+    font-weight: 700;
+    margin:5px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color:#2D9CDB;
+}
+#btn1{
+    padding:14px 28px;
+    background-color: #56ccf2;
+    color:white;
+    font-weight: 700;
+    margin:5px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#btn1:hover{
+    background-color:#2D9CDB;
+}
+#btn2{
+    padding:14px 28px;
+    background-color: #56ccf2;
+    color:white;
+    font-weight: 700;
+    margin:5px;
+    width:160%;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#btn2:hover{
+    background-color:#2D9CDB;
+}
+.center{
+    text-align:center;
+}
